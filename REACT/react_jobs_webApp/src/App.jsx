@@ -13,9 +13,6 @@ import SinlgeJobPAge, {jobLoader} from './pages/SinlgeJobPAge'
 import AddJobPage from './pages/AddJobPage'
 import EditJobPage from './pages/EditJobPage'
 
-
-
-
 const App=()=> {
 
   //Add new job
