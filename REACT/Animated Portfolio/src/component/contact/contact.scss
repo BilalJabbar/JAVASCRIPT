@@ -36,7 +36,7 @@
             margin: auto;
             color: orange;
             fill: orange;
-            
+            z-index: -1;
         }
 
         form{
@@ -50,10 +50,9 @@
                 border: 1px solid white;
                 color: white;
                 border-radius: 5px;
+                cursor: text;
             }
-            textarea{
-                height: 200px;
-            }
+           
             button{
                 background-color: orange;
                 border: none;             
