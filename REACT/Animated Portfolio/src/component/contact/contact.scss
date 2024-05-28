@@ -1,42 +1,96 @@
+@import "../../app.scss";
+
+
 .contact{
     display: flex;
     max-width: 1024px;
     margin: auto;
-
+    gap: 50px;
     align-items: center;
-    
     height: 100%;
+
+    @include mobile{
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+    }
 
     .textContainer{
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 40px;
+
+        @include mobile{
+            margin-top: 70px;
+            text-align: center;
+            align-items: center;
+            gap: 20px;
+        }
+        
         h1{
             font-size: 70px;
             line-height: 88px;
-        }
-        .item{
-            h2{
-                font-size: 20px;
-            }
-            span{
-                font-weight: 300;
+            @include mobile{
+                font-size: 35px;
+                
+                
             }
         }
+        .items{
+            
+            @include mobile{
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+            }
+
+            .item{
+            margin-top: 20px;
+                h2{
+                    font-size: 20px;
+                    
+                }
+                span{
+                    font-weight: 300;
+                    @include mobile{
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+        
+        
         
     }
 
     .formContainer{
         flex: 1;
         position: relative;
+       
+        @include mobile{
+            width: 100%;
+            padding: 0px 50px;
 
+        }
         .phonesvg{
             position: absolute;
             margin: auto;
             color: orange;
             fill: orange;
             z-index: -1;
+            
+            align-items: center;
+            text-align: center;
+            
+
+            svg{
+                @include mobile{
+                    
+                    width: 70%;
+                    height: 70%;
+                }
+            }
         }
 
         form{
@@ -51,6 +105,10 @@
                 color: white;
                 border-radius: 5px;
                 cursor: text;
+
+                @include mobile{
+                    padding: 10px;
+                }
             }
            
             button{
@@ -59,6 +117,10 @@
                 padding: 10px;
                 font-weight: 500;
                 cursor: pointer;
+                
+                @include mobile{
+                    padding: 10px;
+                }
             }
         }
     }

@@ -47,6 +47,7 @@ const Contact = () => {
 
     <motion.div className="textContainer" variants={variants}>
         <motion.h1>Let's Work Together</motion.h1>
+        <div className="items">
         <motion.div className="item" variants={variants}>
             <h2>Mail</h2>
             <span>test@gmail.com</span>
@@ -59,6 +60,7 @@ const Contact = () => {
             <h2>Phone</h2>
             <span>+1025975</span>
         </motion.div>
+        </div>
     </motion.div>
 
     <motion.div className="formContainer">

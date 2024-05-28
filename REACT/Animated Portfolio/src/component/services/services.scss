@@ -1,9 +1,16 @@
+@import "../../app.scss";
 .services{
     display: flex;
     flex-direction: column;
     background: linear-gradient(180deg, #0c0c1c, #111132);
     height: 100%;
     justify-content: space-between;
+
+    @include mobile{
+       align-items: center;
+       justify-items: center;
+
+    }
    
 
     .textContainer{
@@ -13,34 +20,70 @@
         display: flex;
         gap: 20px;
 
+        @include mobile{
+            flex-direction: column;
+            gap: 10px;
+
+        }
+
         br{
             align-items: right;
+            @include mobile{
+                
+    
+            }
         }
         hr{
             width: 200px;
             border: none;
             border-top: 0.5px solid gray;
+            @include mobile{
+                width: 240px;
+            }
+        }
+        P{
+            @include mobile{
+               font-size: 15px;
+               padding: 20px;
+    
+            }
         }
     }
     .titleContainer{
        flex: 2;
        
-       
+       @include mobile{
+        margin-top: 50px;
+    }
         .title{
             justify-content: center;
             align-items: center;
             display: flex;
             gap: 20px;
+            @include mobile{
+               gap: 10px;
+    
+            }
             img{
                 width: 200px;
                 height: 67px;
                 border-radius: 50px;
                 object-fit: cover;
+                @include mobile{
+                    width: 80px;
+                    height: 32px;
+        
+                }
 
             }
             h1{
                 font-weight: 300;
                 font-size: 70px;
+                @include mobile{
+                    font-weight: 80;
+                    font-size: 30px;
+        
+                }
             }
             button{
                 width: 200px;
@@ -50,6 +93,12 @@
                 background-color: orange;
                 font-size: 20px;
                 cursor: pointer;
+                @include mobile{
+                    width: 100px;
+                    height: 32px;
+                    font-size: 10px;
+        
+                }
             }
         }
 
@@ -61,6 +110,11 @@
         
         max-width: 1024px;
         margin: auto;
+
+        @include mobile{
+            flex-direction: column;
+            
+        }
         .box{
             padding: 50px;
             
@@ -68,14 +122,36 @@
             display: flex;
             flex-direction: column;
             justify-items: center;
+            @include mobile{
+                border: none;
+                padding: 10px 30px 60px;
+                gap: 30px;
+                
+            }
+            .heading{
+                @include mobile{
+                    font-size: 30px;
+        
+                }
+            }
             p{
                 margin: 20px 0 ;
+                @include mobile{
+                    display: none;
+                }
             }
             button{
+                margin-top: 5px;
                 padding: 10px;
                 background-color: orange;
                 border: none;
                 cursor: pointer;
+                @include mobile{
+                  
+                   padding: 0px;
+                   margin-top: 0px;
+                   border-radius: 50px;
+                }
                 
             }
 
